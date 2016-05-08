@@ -1,5 +1,5 @@
 //
-//  SemesterController.swift
+//  semesterManager.swift
 //  GradeBook
 //
 //  Created by Scott on 3/29/16.
@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 import UIKit
 
-class SemesterController: NSObject, NSFetchedResultsControllerDelegate{
+class SemesterManager: NSObject, NSFetchedResultsControllerDelegate{
     
     // Data members
     var semesterDataController: NSFetchedResultsController = NSFetchedResultsController();

@@ -10,7 +10,7 @@ import UIKit
 
 class AddWorkItemViewController: UIViewController {
     
-    var semesterController: SemesterController = SemesterController();
+    var semesterManager: SemesterManager = SemesterManager();
     var currentCourse: Course?;
     var categoryName: String?;
     
@@ -74,7 +74,7 @@ class AddWorkItemViewController: UIViewController {
     // Attempt to add an assignment to the Course.
     @IBAction func addAssignmentClicked(sender: AnyObject) {
         if(validateInput()) {
-             semesterController.addWorkItemToCourse(currentCourse!, pointsPoss: Double(pointsPossible.text!)!, pointsEarned: Double(pointsEarned.text!)!, name: assignmentName.text!, category: categoryName!);
+             semesterManager.addWorkItemToCourse(currentCourse!, pointsPoss: Double(pointsPossible.text!)!, pointsEarned: Double(pointsEarned.text!)!, name: assignmentName.text!, category: categoryName!);
             self.navigationController?.popViewControllerAnimated(true);
         }
     }

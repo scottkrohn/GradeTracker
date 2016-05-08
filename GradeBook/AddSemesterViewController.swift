@@ -10,7 +10,7 @@ import UIKit
 
 class AddSemesterViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
     
-    var semester: SemesterController = SemesterController();
+    var semester: SemesterManager = SemesterManager();
     let pickerViewTermData = ["Fall", "Spring", "Summer"];
     let pickerViewYearData = [Int](2000...NSCalendar(identifier: NSCalendarIdentifierGregorian)!.component(.Year, fromDate: NSDate()));
     var selectedSemester: String!

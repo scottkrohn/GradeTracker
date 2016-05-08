@@ -10,7 +10,7 @@ import UIKit
 
 class CourseDetailViewController: UIViewController {
     
-    var semesterController: SemesterController = SemesterController();
+    var semesterManager: SemesterManager = SemesterManager();
     var selectedSemester: Semester?
     var enrolledCourses: [Course]?
     
@@ -21,12 +21,12 @@ class CourseDetailViewController: UIViewController {
         super.viewDidLoad()
         
         enrolledCourses = ((selectedSemester?.mutableSetValueForKey("enrolledCourses"))?.allObjects as! [Course])
-        gpaLabel.text = String(format: "%.2f", semesterController.calcSemesterGPA(enrolledCourses!));
+        gpaLabel.text = String(format: "%.2f", semesterManager.calcSemesterGPA(enrolledCourses!));
     }
     
     override func viewDidAppear(animated: Bool) {
         enrolledCourses = ((selectedSemester?.mutableSetValueForKey("enrolledCourses"))?.allObjects as! [Course])
-        gpaLabel.text = String(format: "%.2f", semesterController.calcSemesterGPA(enrolledCourses!));
+        gpaLabel.text = String(format: "%.2f", semesterManager.calcSemesterGPA(enrolledCourses!));
         courseTable.reloadData();
     }
 
@@ -43,7 +43,7 @@ class CourseDetailViewController: UIViewController {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("protoCell", forIndexPath: indexPath)
         cell.textLabel!.text = enrolledCourses?[indexPath.item].courseName;
-        let courseGrade = semesterController.calcCourseWeightedGrade(enrolledCourses![indexPath.item]);
+        let courseGrade = semesterManager.calcCourseWeightedGrade(enrolledCourses![indexPath.item]);
         cell.detailTextLabel!.text = "Grade: " + String(format: "%.2f", courseGrade) + "%";
         return cell;
     }
@@ -51,7 +51,7 @@ class CourseDetailViewController: UIViewController {
     // Facilitate deleting data from the table view.
     func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
-            semesterController.deleteCourse(selectedSemester!, course: (enrolledCourses?[indexPath.item])!);
+            semesterManager.deleteCourse(selectedSemester!, course: (enrolledCourses?[indexPath.item])!);
             enrolledCourses?.removeAtIndex(indexPath.item);
             courseTable.reloadData();
         }

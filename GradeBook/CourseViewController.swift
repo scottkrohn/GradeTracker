@@ -10,7 +10,7 @@ import UIKit
 
 class CourseViewController: UIViewController {
     
-    var semesterController: SemesterController = SemesterController();
+    var semesterManager: SemesterManager = SemesterManager();
     var currentCourse: Course?;
     var weightCategories: [String] = Array<String>();
     var weightValues: [Int] = Array<Int>();
@@ -45,7 +45,7 @@ class CourseViewController: UIViewController {
     
     // Display the current weighted grade for the course.
     func calcWeightedGrade() {
-        let weightedGrade = semesterController.calcCourseWeightedGrade(currentCourse!);
+        let weightedGrade = semesterManager.calcCourseWeightedGrade(currentCourse!);
         gradeLabel.text = String(format: "Current weighted grade: %.2f", weightedGrade) + "%";
     }
     

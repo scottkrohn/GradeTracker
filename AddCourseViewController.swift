@@ -10,7 +10,7 @@ import UIKit
 
 class AddCourseViewController: UIViewController, AddCategoryViewControllerDelegate {
     
-    var semesterController: SemesterController = SemesterController();
+    var semesterManager: SemesterManager = SemesterManager();
     var selectedSemeter: Semester?
     var categoryWeightTotal: Int = 0;
     
@@ -58,7 +58,7 @@ class AddCourseViewController: UIViewController, AddCategoryViewControllerDelega
             self.presentViewController(alertController, animated: true, completion: nil)
         }
         else {  // Input was valid.
-            semesterController.addCourseToSemester(selectedSemeter!, courseName: courseName!, categories: categories);
+            semesterManager.addCourseToSemester(selectedSemeter!, courseName: courseName!, categories: categories);
             self.navigationController?.popViewControllerAnimated(true);
         }
         

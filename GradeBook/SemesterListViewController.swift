@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController, NSFetchedResultsControllerDelegate{
+class SemesterListViewController: UIViewController, NSFetchedResultsControllerDelegate{
     
     // Outlets
     @IBOutlet weak var semesterTable: UITableView!
@@ -21,19 +21,19 @@ class ViewController: UIViewController, NSFetchedResultsControllerDelegate{
     @IBOutlet weak var logoImage: UIImageView!
     
     // Data members
-    var semesterController: SemesterController! = SemesterController();
+    var semesterManager: SemesterManager = SemesterManager();
     
     override func viewDidLoad() {
         super.viewDidLoad()
         logoImage.image = UIImage(named: "Logo.png");
-        overallGPA.text = String(format: "%.2f", semesterController.calcCumulativeGPA());
+        overallGPA.text = String(format: "%.2f", semesterManager.calcCumulativeGPA());
         // Do any additional setup after loading the view, typically from a nib.
     }
     
     // Reload data for the table view when view appears.
     override func viewDidAppear(animated: Bool) {
         semesterTable.reloadData();
-        overallGPA.text = String(format: "%.2f", semesterController.calcCumulativeGPA());
+        overallGPA.text = String(format: "%.2f", semesterManager.calcCumulativeGPA());
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,22 +43,22 @@ class ViewController: UIViewController, NSFetchedResultsControllerDelegate{
     
     // Delegate function: indicate number of rows for table view.
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return semesterController.getSemesterCount();
+        return semesterManager.getSemesterCount();
     }
     
     // Deleate function: populate the table view.
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("protoCell", forIndexPath: indexPath)
-        cell.textLabel?.text = semesterController.getTerm(indexPath);
+        cell.textLabel?.text = semesterManager.getTerm(indexPath);
         return cell
     }
     
     // Facilitate deleting data from the table view.
     func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
-            semesterController.deleteSemester(indexPath);
+            semesterManager.deleteSemester(indexPath);
             semesterTable.reloadData();
-            overallGPA.text = String(format: "%.2f", semesterController.calcCumulativeGPA());
+            overallGPA.text = String(format: "%.2f", semesterManager.calcCumulativeGPA());
         }
     }
     
@@ -105,7 +105,7 @@ class ViewController: UIViewController, NSFetchedResultsControllerDelegate{
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "courseListSegue") {
             if let courseListViewController = segue.destinationViewController as? CourseDetailViewController {
-                courseListViewController.selectedSemester = semesterController.getSemester(semesterTable.indexPathForSelectedRow!);
+                courseListViewController.selectedSemester = semesterManager.getSemester(semesterTable.indexPathForSelectedRow!);
             }
         }
     }

@@ -10,7 +10,7 @@ import UIKit
 
 class CategoryDetailViewController: UIViewController {
     
-    var semesterController: SemesterController = SemesterController();
+    var semesterManager: SemesterManager = SemesterManager();
     var currentCourse: Course?;
     var categoryName: String?;
     var workItems: [WorkItem]?;
@@ -47,7 +47,7 @@ class CategoryDetailViewController: UIViewController {
     
     // Display the current grade for the category.
     private func calcCategoryGrade() {
-        categoryGradeLabel.text = "Current Category Grade: " + String(format: "%.2f", (semesterController.calcCategoryGrade(currentCourse!, categoryName: categoryName!)) * 100) + "%";
+        categoryGradeLabel.text = "Current Category Grade: " + String(format: "%.2f", (semesterManager.calcCategoryGrade(currentCourse!, categoryName: categoryName!)) * 100) + "%";
     }
     
     override func didReceiveMemoryWarning() {
@@ -57,7 +57,7 @@ class CategoryDetailViewController: UIViewController {
     // Facilitate deleting data from the table view.
     func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
-            semesterController.deleteWorkItem(workItems![indexPath.item]);
+            semesterManager.deleteWorkItem(workItems![indexPath.item]);
             workItems?.removeAtIndex(indexPath.item);
             loadCategoryWorkItems();
             categoryTable.reloadData();

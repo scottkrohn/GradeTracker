@@ -14,12 +14,12 @@
 		54583CF41CC986DC00BE67EB /* AddWorkItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54583CF31CC986DC00BE67EB /* AddWorkItemViewController.swift */; };
 		5458B2981CCAA4FB008469AD /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5458B2971CCAA4FB008469AD /* Logo.png */; };
 		5464845B1CC6E47B002EA48E /* AddCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5464845A1CC6E47B002EA48E /* AddCategoryViewController.swift */; };
-		546F76211CAB223B0067E799 /* SemesterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F76201CAB223B0067E799 /* SemesterController.swift */; };
+		546F76211CAB223B0067E799 /* SemesterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F76201CAB223B0067E799 /* SemesterManager.swift */; };
 		546F76251CAB451E0067E799 /* AddSemesterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F76241CAB451E0067E799 /* AddSemesterViewController.swift */; };
 		546F76311CAE28760067E799 /* CourseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F76301CAE28760067E799 /* CourseDetailViewController.swift */; };
 		54E3827B1CBD94DD0083B938 /* Semester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E382791CBD94DD0083B938 /* Semester.swift */; };
 		B3819AD31CA49AE000C1EB78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3819AD21CA49AE000C1EB78 /* AppDelegate.swift */; };
-		B3819AD51CA49AE000C1EB78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3819AD41CA49AE000C1EB78 /* ViewController.swift */; };
+		B3819AD51CA49AE000C1EB78 /* SemesterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3819AD41CA49AE000C1EB78 /* SemesterListViewController.swift */; };
 		B3819AD81CA49AE000C1EB78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3819AD61CA49AE000C1EB78 /* Main.storyboard */; };
 		B3819ADB1CA49AE000C1EB78 /* GradeBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3819AD91CA49AE000C1EB78 /* GradeBook.xcdatamodeld */; };
 		B3819ADD1CA49AE000C1EB78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3819ADC1CA49AE000C1EB78 /* Assets.xcassets */; };
@@ -36,13 +36,13 @@
 		54583CF31CC986DC00BE67EB /* AddWorkItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddWorkItemViewController.swift; sourceTree = "<group>"; };
 		5458B2971CCAA4FB008469AD /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		5464845A1CC6E47B002EA48E /* AddCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCategoryViewController.swift; sourceTree = "<group>"; };
-		546F76201CAB223B0067E799 /* SemesterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemesterController.swift; sourceTree = "<group>"; };
+		546F76201CAB223B0067E799 /* SemesterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemesterManager.swift; sourceTree = "<group>"; };
 		546F76241CAB451E0067E799 /* AddSemesterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSemesterViewController.swift; sourceTree = "<group>"; };
 		546F76301CAE28760067E799 /* CourseDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseDetailViewController.swift; sourceTree = "<group>"; };
 		54E382791CBD94DD0083B938 /* Semester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Semester.swift; sourceTree = "<group>"; };
 		B3819ACF1CA49AE000C1EB78 /* GradeBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GradeBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3819AD21CA49AE000C1EB78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B3819AD41CA49AE000C1EB78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B3819AD41CA49AE000C1EB78 /* SemesterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemesterListViewController.swift; sourceTree = "<group>"; };
 		B3819AD71CA49AE000C1EB78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B3819ADA1CA49AE000C1EB78 /* GradeBook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GradeBook.xcdatamodel; sourceTree = "<group>"; };
 		B3819ADC1CA49AE000C1EB78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,8 +66,8 @@
 		546F76321CAE29050067E799 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B3819AD41CA49AE000C1EB78 /* ViewController.swift */,
-				546F76201CAB223B0067E799 /* SemesterController.swift */,
+				B3819AD41CA49AE000C1EB78 /* SemesterListViewController.swift */,
+				546F76201CAB223B0067E799 /* SemesterManager.swift */,
 				546F76241CAB451E0067E799 /* AddSemesterViewController.swift */,
 				544139AA1CC9603500923755 /* CourseViewController.swift */,
 				546F76301CAE28760067E799 /* CourseDetailViewController.swift */,
@@ -203,12 +203,12 @@
 				B3819AF11CA6E35600C1EB78 /* WorkItem.swift in Sources */,
 				54583CF41CC986DC00BE67EB /* AddWorkItemViewController.swift in Sources */,
 				3FC2E0DB1CC69077001F39B9 /* AddCourseViewController.swift in Sources */,
-				B3819AD51CA49AE000C1EB78 /* ViewController.swift in Sources */,
+				B3819AD51CA49AE000C1EB78 /* SemesterListViewController.swift in Sources */,
 				B3819AD31CA49AE000C1EB78 /* AppDelegate.swift in Sources */,
 				5464845B1CC6E47B002EA48E /* AddCategoryViewController.swift in Sources */,
 				B3819ADB1CA49AE000C1EB78 /* GradeBook.xcdatamodeld in Sources */,
 				B3E1904C1CA6F3830076B6B4 /* Student.swift in Sources */,
-				546F76211CAB223B0067E799 /* SemesterController.swift in Sources */,
+				546F76211CAB223B0067E799 /* SemesterManager.swift in Sources */,
 				54583CF21CC9806700BE67EB /* CategoryDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
