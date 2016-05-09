@@ -22,7 +22,7 @@
             </objects>
             <point key="canvasLocation" x="-1372" y="382"/>
         </scene>
-        <!--Title-->
+        <!--Course View-->
         <scene sceneID="lib-pf-JBh">
             <objects>
                 <viewController id="BXd-Fj-D3W" customClass="CourseViewController" customModule="GradeBook" customModuleProvider="target" sceneMemberID="viewController">
@@ -111,7 +111,7 @@
                             <constraint firstItem="dAP-7r-uuB" firstAttribute="top" secondItem="t5c-TZ-6Xx" secondAttribute="bottom" constant="8" id="rXh-ly-PAz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="wif-Oc-gHP"/>
+                    <navigationItem key="navigationItem" title="Course View" id="wif-Oc-gHP"/>
                     <connections>
                         <outlet property="courseTable" destination="t5c-TZ-6Xx" id="Qmn-qM-jVB"/>
                         <outlet property="gradeLabel" destination="x9l-iK-ygh" id="Dwj-vN-d4q"/>
@@ -622,16 +622,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Xud-kK-Cm6">
-                                <rect key="frame" x="117" y="234" width="366" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="362" id="Url-jJ-gIa"/>
-                                    <constraint firstAttribute="height" constant="30" id="ZSz-ck-ceS"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="sliderUpdated:" destination="SXe-ZM-b9p" eventType="valueChanged" id="waD-bd-iSo"/>
-                                </connections>
-                            </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDO-iT-sSa">
                                 <rect key="frame" x="290" y="289" width="21" height="21"/>
                                 <constraints>
@@ -653,15 +643,24 @@
                                     <action selector="addClicked:" destination="SXe-ZM-b9p" eventType="touchUpInside" id="XXg-Xr-8Vf"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Xud-kK-Cm6">
+                                <rect key="frame" x="18" y="234" width="564" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="560" id="3QN-bM-Me6"/>
+                                    <constraint firstAttribute="height" constant="30" id="ZSz-ck-ceS"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderUpdated:" destination="SXe-ZM-b9p" eventType="valueChanged" id="waD-bd-iSo"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="8Q4-6c-4Hz" secondAttribute="trailing" constant="20" id="B4g-YQ-UD7"/>
+                            <constraint firstItem="Xud-kK-Cm6" firstAttribute="leading" secondItem="cd9-IP-xHM" secondAttribute="leading" constant="20" id="EyF-Uh-Lhm"/>
                             <constraint firstItem="8Gm-Fb-MYB" firstAttribute="top" secondItem="8Q4-6c-4Hz" secondAttribute="bottom" constant="30" id="Jpy-mp-GsR"/>
                             <constraint firstItem="KSM-tE-KFa" firstAttribute="top" secondItem="Xud-kK-Cm6" secondAttribute="bottom" constant="72" id="KTV-Kl-wDy"/>
-                            <constraint firstItem="Xud-kK-Cm6" firstAttribute="leading" secondItem="cd9-IP-xHM" secondAttribute="leading" constant="119" id="QKE-Sr-2Kz"/>
                             <constraint firstItem="8Q4-6c-4Hz" firstAttribute="top" secondItem="TG0-u7-NID" secondAttribute="bottom" constant="52" id="SCg-Xr-1VR"/>
-                            <constraint firstAttribute="trailing" secondItem="Xud-kK-Cm6" secondAttribute="trailing" constant="119" id="TUD-QB-Tql"/>
                             <constraint firstItem="PDO-iT-sSa" firstAttribute="top" secondItem="Xud-kK-Cm6" secondAttribute="bottom" constant="25" id="TZa-ki-nIZ"/>
                             <constraint firstItem="PDO-iT-sSa" firstAttribute="centerX" secondItem="cd9-IP-xHM" secondAttribute="centerX" id="Wsg-GE-rOR"/>
                             <constraint firstItem="8Gm-Fb-MYB" firstAttribute="centerX" secondItem="cd9-IP-xHM" secondAttribute="centerX" id="XoW-nk-6DU"/>
@@ -670,6 +669,7 @@
                             <constraint firstItem="Xud-kK-Cm6" firstAttribute="top" secondItem="8Gm-Fb-MYB" secondAttribute="bottom" constant="37" id="jOe-AX-mqS"/>
                             <constraint firstItem="OEc-uL-11z" firstAttribute="top" secondItem="TG0-u7-NID" secondAttribute="bottom" constant="56" id="pKn-Zo-c6H"/>
                             <constraint firstItem="OEc-uL-11z" firstAttribute="leading" secondItem="cd9-IP-xHM" secondAttribute="leading" constant="20" id="qNq-77-RhO"/>
+                            <constraint firstAttribute="trailing" secondItem="Xud-kK-Cm6" secondAttribute="trailing" constant="20" id="tXN-GH-Ce6"/>
                             <constraint firstItem="8Q4-6c-4Hz" firstAttribute="leading" secondItem="OEc-uL-11z" secondAttribute="trailing" constant="8" id="y33-rk-0Tu"/>
                         </constraints>
                     </view>
