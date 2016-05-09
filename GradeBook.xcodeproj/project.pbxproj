@@ -16,7 +16,7 @@
 		5464845B1CC6E47B002EA48E /* AddCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5464845A1CC6E47B002EA48E /* AddCategoryViewController.swift */; };
 		546F76211CAB223B0067E799 /* SemesterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F76201CAB223B0067E799 /* SemesterManager.swift */; };
 		546F76251CAB451E0067E799 /* AddSemesterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F76241CAB451E0067E799 /* AddSemesterViewController.swift */; };
-		546F76311CAE28760067E799 /* CourseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F76301CAE28760067E799 /* CourseDetailViewController.swift */; };
+		546F76311CAE28760067E799 /* CourseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F76301CAE28760067E799 /* CourseListViewController.swift */; };
 		54E3827B1CBD94DD0083B938 /* Semester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E382791CBD94DD0083B938 /* Semester.swift */; };
 		B3819AD31CA49AE000C1EB78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3819AD21CA49AE000C1EB78 /* AppDelegate.swift */; };
 		B3819AD51CA49AE000C1EB78 /* SemesterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3819AD41CA49AE000C1EB78 /* SemesterListViewController.swift */; };
@@ -38,7 +38,7 @@
 		5464845A1CC6E47B002EA48E /* AddCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCategoryViewController.swift; sourceTree = "<group>"; };
 		546F76201CAB223B0067E799 /* SemesterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemesterManager.swift; sourceTree = "<group>"; };
 		546F76241CAB451E0067E799 /* AddSemesterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSemesterViewController.swift; sourceTree = "<group>"; };
-		546F76301CAE28760067E799 /* CourseDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseDetailViewController.swift; sourceTree = "<group>"; };
+		546F76301CAE28760067E799 /* CourseListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseListViewController.swift; sourceTree = "<group>"; };
 		54E382791CBD94DD0083B938 /* Semester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Semester.swift; sourceTree = "<group>"; };
 		B3819ACF1CA49AE000C1EB78 /* GradeBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GradeBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3819AD21CA49AE000C1EB78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 				546F76201CAB223B0067E799 /* SemesterManager.swift */,
 				546F76241CAB451E0067E799 /* AddSemesterViewController.swift */,
 				544139AA1CC9603500923755 /* CourseViewController.swift */,
-				546F76301CAE28760067E799 /* CourseDetailViewController.swift */,
+				546F76301CAE28760067E799 /* CourseListViewController.swift */,
 				3FC2E0DA1CC69077001F39B9 /* AddCourseViewController.swift */,
 				5464845A1CC6E47B002EA48E /* AddCategoryViewController.swift */,
 				54583CF11CC9806700BE67EB /* CategoryDetailViewController.swift */,
@@ -197,7 +197,7 @@
 			files = (
 				544139AB1CC9603500923755 /* CourseViewController.swift in Sources */,
 				542A82BC1CC95C100035522E /* Course.swift in Sources */,
-				546F76311CAE28760067E799 /* CourseDetailViewController.swift in Sources */,
+				546F76311CAE28760067E799 /* CourseListViewController.swift in Sources */,
 				54E3827B1CBD94DD0083B938 /* Semester.swift in Sources */,
 				546F76251CAB451E0067E799 /* AddSemesterViewController.swift in Sources */,
 				B3819AF11CA6E35600C1EB78 /* WorkItem.swift in Sources */,

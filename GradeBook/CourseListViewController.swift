@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CourseDetailViewController: UIViewController {
+class CourseListViewController: UIViewController {
     
     var semesterManager: SemesterManager = SemesterManager();
     var selectedSemester: Semester?

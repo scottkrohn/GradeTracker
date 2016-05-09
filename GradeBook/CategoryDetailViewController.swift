@@ -38,7 +38,7 @@ class CategoryDetailViewController: UIViewController {
     // Load the work items that correspond to the selected category.
     private func loadCategoryWorkItems() {
         categoryMatchingItems?.removeAll();
-        for(var i = 0; i < workItems!.count; i++) {
+        for(var i = 0; i < workItems!.count; i += 1) {
             if(workItems![i].category == categoryName) {
                 categoryMatchingItems?.append(workItems![i]);
             } 

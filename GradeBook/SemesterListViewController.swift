@@ -104,7 +104,7 @@ class SemesterListViewController: UIViewController, NSFetchedResultsControllerDe
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "courseListSegue") {
-            if let courseListViewController = segue.destinationViewController as? CourseDetailViewController {
+            if let courseListViewController = segue.destinationViewController as? CourseListViewController{
                 courseListViewController.selectedSemester = semesterManager.getSemester(semesterTable.indexPathForSelectedRow!);
             }
         }
